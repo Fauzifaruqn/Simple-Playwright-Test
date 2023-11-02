@@ -1,0 +1,29 @@
+{
+  "name": "automationtestingxtr-playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "node src/helper/report/init.js",
+    "test": "cucumber-js --config=config/cucumber.js --format ./allure-reporter.js",
+    "report-test": "node src/helper/report/report.js"
+  },
+  "cucumber-js": {
+    "require": [
+      "config/config.js"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.0.1",
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.10",
+    "allure-commandline": "^2.24.1",
+    "allure-cucumberjs": "^2.9.2",
+    "allure-js-commons": "^2.9.2",
+    "dotenv": "^16.3.1",
+    "fs-extra": "^11.1.1",
+    "winston": "^3.11.0"
+  }
+}
